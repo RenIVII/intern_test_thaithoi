@@ -33,11 +33,31 @@ app.post('/create-payment-link', async (req, res) => {
         res.send('Something went error');
     }
 });
-//  https://ea87-171-240-218-127.ngrok-free.app/receive-hook
-app.post('/receive-hook', async (req, res) => {
-    console.log(req.body);
-    res.json()
-});
+//  https://0581-171-240-218-127.ngrok-free.app/receive-hook
+// app.get('/receive-hook', async (req, res) => {
+//     console.log(req.body);
+//     //res.json()
+//     res.send("aaaa")
+// });
+
+app.post("/confirm-webhook", async (req, res) => {
+    const { webhookUrl } = req.body;
+    try {
+      await payOS.confirmWebhook(webhookUrl);
+      return res.json({
+        error: 0,
+        message: "ok",
+        data: null,
+      });
+    } catch (error) {
+      console.error(error);
+      return res.json({
+        error: -1,
+        message: "failed",
+        data: null,
+      });
+    }
+  });
 
 app.listen(PORT, function () {
     console.log(`Server is listening on port ${PORT}`);
