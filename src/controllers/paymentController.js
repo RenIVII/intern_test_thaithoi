@@ -1,11 +1,14 @@
 const payOS = require("../utils/payos");
 const PORT = process.env.PORT || 3000;
+const YOUR_DOMAIN = process.env.YOUR_DOMAIN || `http://localhost:${PORT}`;
 const getHomePage = (req, res) => {
   res.render("homePage.ejs");
 };
 
+
 const createPayment = async (req, res) => {
-  const YOUR_DOMAIN = `http://localhost:${PORT}`;
+  // const YOUR_DOMAIN = `http://localhost:${PORT}`;
+  
   const body = {
     orderCode: Number(String(Date.now()).slice(-6)),
     amount: 2000,
