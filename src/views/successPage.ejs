@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+
+    <title>Thanh toán thành công</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <nav class="header">
+      <div class="logo" style="align-items: center; justify-content: center;">
+        <img src="ebook1.jpg" style="width:100px; height:100px"/>
+      </div>
+      <div class="book-store">
+        <strong href="/" style="font-size:40px; text-decoration: none; font-family: Be Vietnam Pro; color: #6655ff;">Cửa hàng sách Ebook</strong>
+      </div>
+    </nav>
+
+    <div class="main-box" style="background-color: #fff;background-image: url(https://payos.vn/wp-content/uploads/sites/13/2023/11/Bg-Hd.svg)" >
+      <strong style="font-family: Be VietNam Pro; font-size: 35px; padding-top: 30px">Checkout</strong>
+
+      <div>
+        <img style="height: 100%; width: 100%;" src="tick.png" alt="" />
+      </div>
+
+      <div class="main-box" style = "margin-top: -150px">
+        <h4 class="payment-titlte" style="font-family: Be VietNam Pro; font-size: 35px">
+          Thanh toán thành công. Cảm ơn bạn đã mua hàng! <%=
+          inforPayment.orderCode %>
+        </h4>
+        <p style="font-family: Be VietNam Pro; font-size: 15px">
+          Nếu có bất kỳ câu hỏi nào, hãy gửi email tới
+          <a href="mailto:support@payos.vn">support@payos.vn</a>
+        </p>
+        <table style="margin-bottom: 50px">
+          <thead>
+            <tr>
+              <th>Sản phẩm</th>
+              <th>Số lượng</th>
+              <th>Đơn giá</th>
+              <th>Tổng tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bí mật của may mắn - Ebook version</td>
+              <td>1</td>
+              <td> <%= inforPayment.amount %> VNĐ</td>
+              <td> <%= inforPayment.amount %> VNĐ</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="/" id="return-page-btn" style="font-family: Be VietNam Pro; font-size: 15px; text-decoration: none">Trở về trang Tạo Link thanh toán</a>
+      </div>
+     
+    <script src="./js/paymentService.js"></script>
+  </div>
+  </body>
+</html>

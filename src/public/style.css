@@ -1,0 +1,168 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.be-vietnam-pro-regular {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+img {
+  height: 60%;
+  width: 60%;
+  /* padding: 0 150px; */
+}
+.container {
+  display: flex;
+  height: 400px;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+}
+.checkout {
+  width: 400px;
+  box-shadow: 0 0 0 1px #6655ff;
+  border-radius: 5px;
+  padding: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table th {
+  background-color: #f2f2f2;
+  color: black;
+}
+.product {
+  padding: 6px 10px;
+}
+
+.product p {
+  font-size: medium;
+}
+
+#create-payment-link-btn {
+  /* width: 100%;
+  height: 36px;
+  background-color: #6655ff;
+  color: white;
+  border: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: medium; */
+
+  background-color: white;
+  border: rgb(102, 85, 255);
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(102, 85, 255);
+  /* height: 36px;
+  width: 62px; */
+  border-radius: 5px;
+  cursor: pointer;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+#create-payment-link-btn:hover {
+  background-color: #6655ff;
+  color: white;
+}
+
+#create-payment-link-btn:active {
+  opacity: 0.7;
+}
+
+
+
+#result {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#result td,
+#result th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#result tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#result tr:hover {
+  background-color: #ddd;
+}
+
+#result th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #6655ff;
+  color: white;
+}
+
+#query-string-table {
+  width: 50%;
+}
+
+.payment-titlte {
+  color: #6655ff;
+  font-size: larger;
+}
+
+#return-page-btn {
+  background-color: white;
+  border: rgb(102, 85, 255);
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(102, 85, 255);
+  /* height: 36px;
+  width: 62px; */
+  border-radius: 5px;
+  cursor: pointer;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+#return-page-btn:hover {
+  background-color: #6655ff;
+  color: white;
+}
+
+#return-page-btn:active {
+  opacity: 0.7;
+}
